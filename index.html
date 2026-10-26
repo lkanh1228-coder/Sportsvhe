@@ -1,65 +1,25 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eSports VHE - 20 Tuong Icon</title>
-<style>
-body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;display:flex;justify-content:center;padding:12px}
-.box{max-width:420px;width:100%}
-.card{background:#1e1e3a;border-radius:18px;padding:14px}
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSports VHE - 20 Tuong Fix</title>
+<style>body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;display:flex;justify-content:center;padding:12px}
+.box{max-width:420px;width:100%}.card{background:#1e1e3a;border-radius:18px;padding:14px}
 img.main{width:100%;height:200px;border-radius:12px;object-fit:cover;background:#000}
-.top{display:flex;justify-content:space-between;background:#15152a;padding:10px 12px;border-radius:10px;margin-bottom:10px;font-weight:800}
-.follow{background:#1877F2;color:#fff;padding:13px;border-radius:12px;display:block;text-align:center;text-decoration:none;font-weight:800}
+.top{display:flex;justify-content:space-between;background:#15152a;padding:10px;border-radius:10px;margin-bottom:10px;font-weight:800}
+.follow{background:#1877F2;color:#fff;padding:14px;border-radius:12px;display:block;text-align:center;text-decoration:none;font-weight:800}
 .opt{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
-.opt button{background:#2a2a4a;border-radius:12px;padding:8px;border:2px solid transparent;display:flex;flex-direction:column;align-items:center;gap:6px}
-.opt button img{width:60px;height:60px;border-radius:10px}
-.opt button span{font-size:12px;color:#fff;font-weight:700}
-</style>
-</head>
+.opt button{background:#2a2a4a;border-radius:12px;padding:8px;border:2px solid transparent}
+.opt button img{width:60px;height:60px;border-radius:10px}</style></head>
 <body>
 <div class="box">
-<div id="gate">
-<h3 style="text-align:center;color:#a78bfa">🎮 eSports VHE - 20 TƯỚNG</h3>
-<a class="follow" href="https://www.facebook.com/eSportsVHE" target="_blank" onclick="setTimeout(()=>{document.getElementById('play').style.display='block'},1000)">1️⃣ FOLLOW eSports VHE</a>
-<button id="play" style="display:none;width:100%;background:#22c55e;color:#fff;padding:13px;border-radius:12px;font-weight:800;border:0;margin-top:10px" onclick="start()">2️⃣ ĐÃ FOLLOW - VÀO CHƠI ▶️</button>
+<div id="gate"><h3 style="text-align:center;color:#a78bfa">🎮 eSports VHE - 20 TƯỚNG</h3>
+<a class="follow" href="https://www.facebook.com/eSportsVHE" target="_blank">1️⃣ FOLLOW eSports VHE</a>
+<button onclick="document.getElementById('gate').style.display='none';document.getElementById('game').style.display='block';load();" style="width:100%;background:#22c55e;color:#fff;padding:14px;border-radius:12px;font-weight:800;border:0;margin-top:10px;font-size:16px">2️⃣ ĐÃ FOLLOW - BẤM VÀO CHƠI NGAY ▶️</button>
 </div>
-<div id="game" style="display:none">
-<div class="top"><span id="c">1/20</span><span id="s">0đ</span><span id="t">15s</span></div>
-<div class="card"><img id="im" class="main"><div id="qt" style="margin:12px 0;font-weight:800;font-size:18px;text-align:center"></div><div id="op" class="opt"></div><div id="end" style="display:none;text-align:center;margin-top:12px"></div></div>
-</div>
-</div>
+<div id="game" style="display:none"><div class="top"><span id="c">1/20</span><span id="s">0đ</span><span id="t">15s</span></div>
+<div class="card"><img id="im" class="main"><div id="qt" style="margin:12px 0;font-weight:800;text-align:center"></div><div id="op" class="opt"></div><div id="end" style="display:none;text-align:center"></div></div></div></div>
 <script>
-function start(){document.getElementById('gate').style.display='none';document.getElementById('game').style.display='block';load();}
-const VER="14.23.1";
-const icon = n => `https://ddragon.leagueoflegends.com/cdn/${VER}/img/champion/${n}.png`;
-const splash = n => `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${n}_0.jpg`;
-const Q=[
-["LỐC XOÁY TỬ VONG",["Garen","Katarina","Samira"],1,"Katarina"],
-["CẦU VỒNG TỐI THƯỢNG",["Lux","Seraphine","Ezreal"],0,"Lux"],
-["BÃO ĐẠN",["MissFortune","Jinx","Lucian"],0,"MissFortune"],
-["ĐẠI BĂNG TIỄN",["Ashe","Varus","Jhin"],0,"Ashe"],
-["CÔNG LÝ DEMACIA",["Garen","Darius","Kayle"],0,"Garen"],
-["TỪ CHỐI TỬ THẦN",["Tryndamere","Aatrox","Olaf"],0,"Tryndamere"],
-["TRĂN TRỐI",["Yasuo","Yone","Irelia"],0,"Yasuo"],
-["BÓNG ĐÈ",["Nocturne","Zed","Karthus"],0,"Nocturne"],
-["THẦN CÁ SẤU",["Renekton","Nasus","ChoGath"],0,"Renekton"],
-["TIỆC RỪNG",["ChoGath","TahmKench","Lissandra"],0,"ChoGath"],
-["DẤU ẤN TỬ THẦN",["Zed","Talon","Kayn"],0,"Zed"],
-["KHÚC CẦU HỒN",["Karthus","Yorick","Mordekaiser"],0,"Karthus"],
-["SIÊU TÊN LỬA CHẾT CHÓC",["Jinx","Caitlyn","Ezreal"],0,"Jinx"],
-["CUNG ÁNH SÁNG",["Ezreal","Lux","Jinx"],0,"Ezreal"],
-["SÂN KHẤU TỬ THẦN",["Jhin","Lucian","Senna"],0,"Jhin"],
-["BÁCH PHÁT BÁCH TRÚNG",["Caitlyn","Jinx","Vi"],0,"Caitlyn"],
-["MÁY CHÉM NOXUS",["Darius","Garen","Urgot"],0,"Darius"],
-["BẪY ĐỘC NOXUS",["Teemo","Shaco","Singed"],0,"Teemo"],
-["KHÔNG THỂ CẢN PHÁ",["Malphite","Rammus","Alistar"],0,"Malphite"],
-["PHONG KIẾM TRỪ TÀ",["Yone","Yasuo","MasterYi"],0,"Yone"]
-];
-let i=0,sc=0,tm=15,iv;
-function load(){
- if(i>=Q.length){
-  clearInterval(iv);
-  document.getElementById('qt').innerHTML=`🎉 XONG 20 TƯỚNG!<br>${sc}/2000 điểm`;
-  document.getElementById('op').innerHTML="";
-  let e=document.getElementById('end');e.style.display='block';
-  e.innerHTML=`<a href="https://www.facebook
+const VER="14.23.1";const icon=n=>`https://ddragon.leagueoflegends.com/cdn/${VER}/img/champion/${n}.png`;
+const splash=n=>`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${n}_0.jpg`;
+const Q=[["LỐC XOÁY TỬ VONG",["Garen","Katarina","Samira"],1,"Katarina"],["CẦU VỒNG TỐI THƯỢNG",["Lux","Seraphine","Ezreal"],0,"Lux"],["BÃO ĐẠN",["MissFortune","Jinx","Lucian"],0,"MissFortune"],["ĐẠI BĂNG TIỄN",["Ashe","Varus","Jhin"],0,"Ashe"],["CÔNG LÝ DEMACIA",["Garen","Darius","Kayle"],0,"Garen"],["TỪ CHỐI TỬ THẦN",["Tryndamere","Aatrox","Olaf"],0,"Tryndamere"],["TRĂN TRỐI",["Yasuo","Yone","Irelia"],0,"Yasuo"],["BÓNG ĐÈ",["Nocturne","Zed","Karthus"],0,"Nocturne"],["THẦN CÁ SẤU",["Renekton","Nasus","ChoGath"],0,"Renekton"],["TIỆC RỪNG",["ChoGath","TahmKench","Lissandra"],0,"ChoGath"],["DẤU ẤN TỬ THẦN",["Zed","Talon","Kayn"],0,"Zed"],["KHÚC CẦU HỒN",["Karthus","Yorick","Mordekaiser"],0,"Karthus"],["SIÊU TÊN LỬA",["Jinx","Caitlyn","Ezreal"],0,"Jinx"],["CUNG ÁNH SÁNG",["Ezreal","Lux","Jinx"],0,"Ezreal"],["SÂN KHẤU TỬ THẦN",["Jhin","Lucian","Senna"],0,"Jhin"],["BÁCH PHÁT BÁCH TRÚNG",["Caitlyn","Jinx","Vi"],0,"Caitlyn"],["MÁY CHÉM NOXUS",["Darius","Garen","Urgot"],0,"Darius"],["BẪY ĐỘC",["Teemo","Shaco","Singed"],0,"Teemo"],["KHÔNG THỂ CẢN PHÁ",["Malphite","Rammus","Alistar"],0,"Malphite"],["PHONG KIẾM TRỪ TÀ",["Yone","Yasuo","MasterYi"],0,"Yone"]];
+let i=0,sc=0,tm=15,iv;function load(){if(i>=Q.length){clearInterval(iv);document.getElementById('qt').innerHTML=`🎉 XONG 20 TƯỚNG!<br>${sc}/2000 điểm`;document.getElementById('op').innerHTML="";let e=document.getElementById('end');e.style.display='block';e.innerHTML=`<a href="https://www.facebook.com/eSportsVHE" target="_blank" style="display:block;background:#1877F2;color:#fff;padding:13px;border-radius:12px;text-decoration:none;font-weight:800">Chụp màn hình ${sc}đ gửi về Page nhận CODE</a>`;return;}let q=Q[i];document.getElementById('c').innerText=(i+1)+"/20";document.getElementById('s').innerText=sc+"đ";document.getElementById('im').src=splash(q[3]);document.getElementById('qt').innerText=`Câu ${i+1}: "${q[0]}" là của ai?`;let op=document.getElementById('op');op.innerHTML="";q[1].forEach((name,j)=>{let b=document.createElement('button');b.innerHTML=`<img src="${icon(name)}"><br><span style="color:#fff;font-size:12px">${name}</span>`;b.onclick=()=>{if(j==q[2]){sc+=100;b.style.borderColor="#22c55e";b.style.background="#14532d"}else{b.style.borderColor="#ef4444"}setTimeout(()=>{i++;load()},500)};op.appendChild(b)});tm=15;clearInterval(iv);iv=setInterval(()=>{tm--;document.getElementById('t').innerText=tm+"s";if(tm<=0){i++;load()}},1000);}
+</script></body></html>
