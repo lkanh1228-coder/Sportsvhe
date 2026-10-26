@@ -40,4 +40,11 @@ label{display:block;padding:8px;margin:4px 0;background:#1e293b;border-radius:8p
 <div class="q"><h3>C26: BẪY ĐỘC NOXUS?</h3><label><input type="radio" name="q26" value="A"> A. Teemo</label><label><input type="radio" name="q26" value="B"> B. Singed</label></div>
 <div class="q"><h3>C27: KHÔNG THỂ CẢN PHÁ?</h3><label><input type="radio" name="q27" value="A"> A. Malphite</label><label><input type="radio" name="q27" value="B"> B. Alistar</label></div>
 <div class="q"><h3>C28: ĐOẠT MỆNH?</h3><label><input type="radio" name="q28" value="A"> A. Yone</label><label><input type="radio" name="q28" value="B"> B. Yasuo</label></div>
-<button type="button" class="btn" onclick="check()">NỘP BÀI 28 CÂ
+<button type="button" class="btn" onclick="check()">NỘP BÀI 28 CÂU</button>
+</form>
+<div id="res" style="display:none;text-align:center"><div class="score" id="score"></div><p id="msg"></p><button class="btn" onclick="location.href='tuyen-thanh-vien.html'">ĐI ĐẾN FORM TUYỂN →</button></div>
+</div>
+<script>
+const ans={q1:"A",q2:"B",q3:"B",q4:"A",q5:"A",q6:"B",q7:"A",q8:"A",q9:"A",q10:"A",q11:"A",q12:"A",q13:"A",q14:"A",q15:"A",q16:"A",q17:"A",q18:"A",q19:"A",q20:"A",q21:"A",q22:"A",q23:"A",q24:"A",q25:"A",q26:"A",q27:"A",q28:"A"};
+function check(){let s=0;for(let k in ans){let v=document.querySelector('input[name="'+k+'"]:checked');if(v&&v.value==ans[k])s++;}document.getElementById('quiz').style.display='none';document.getElementById('res').style.display='block';document.getElementById('score').innerText=s+'/28';let m=s>=24?"🔥 HUYỀN THOẠI!":s>=18?"💎 CAO THỦ!":s>=12?"⚔️ KHÁ!":"🌱 TẬP SỰ!";document.getElementById('msg').innerText=m;}
+</script></body></html>
