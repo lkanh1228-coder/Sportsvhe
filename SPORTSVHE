@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eSports VHE - Follow De Choi Game</title>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz 28 Câu - VHU x Ulti</title>
 <style>
-body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;text-align:center;display:flex;justify-content:center;padding:20px}
-.box{max-width:400px;width:100%}
-.card{background:#1e1e3a;border-radius:20px;padding:20px;border:2px solid #7b2cff55}
-.follow{background:#1877F2;color:#fff;padding:16px;border-radius:12px;display:block;text-decoration:none;font-weight:800;font-size:18px;margin:15px 0}
-.play{background:#22c55e;color:#fff;padding:16px;border-radius:12px;display:none;text-decoration:none;font-weight:800;font-size:18px;margin:15px 0;border:0;width:100%}
-img{width:100%;height:190px;border-radius:12px;object-fit:cover}
-button{width:100%;padding:13px;margin-top:8px;border-radius:10px;border:0;background:#2a2a4a;color:#fff;font-weight:700}
-.small{color:#aaa;font-size:13px;margin-top:10px}
-</style>
-</head>
-<body>
-<div class="box" id="followGate">
-<div class="card">
-<h2 style="color:#a78bfa;margin:5px">🎮 eSports VHE</h2>
-<p>Follow kênh để mở khóa trò chơi đoán Ulti Liên Minh!</p>
-<img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg">
-<a class="follow" href="https://www.facebook.com/eSportsVHE" target="_blank" onclick="unlock()">1️⃣ BẤM FOLLOW eSports VHE</a>
-<button id="playBtn" class="play" onclick="startGame()">2️⃣ ĐÃ FOLLOW - VÀO CHƠI NGAY ▶️</button>
-<div class="small">Bấm Follow xong quay lại đây, nút xanh sẽ hiện ra</div>
-</div>
-</div>
-
-<div class="box" id="gameBox" style="display:none">
-<div style="display:flex;justify-content:space-between;background:#15152a;padding:10px;border-radius:10px;margin-bottom:10px;font-weight:700"><span id="c">1/5</span><span id="s">0đ</span><span id="t">15s</span></div>
-<div class="card"><img id="im"><div id="qt" style="margin:12px 0;font-weight:700"></div><div id="op"></div></div>
-</div>
-
-<script>
-function unlock(){
- setTimeout(()=>{document.getElementById('playBtn').style.display='block'},1500);
-}
-function startGame(){
- document.getElementById('followGate').style.display='none';
- document.getElementById('gameBox').style.display='block';
- load();
-}
-const Q=[["LỐC XOÁY TỬ VONG",["Garen","Katarina","Samira"],1,"Katarina_0.jpg"],["CẦU VỒNG TỐI THƯỢNG",["Lux","Seraphine","Ezreal"],0,"Lux_0.jpg"],["BÃO ĐẠN",["Miss Fortune","Jinx","Lucian"],0,"MissFortune_0.jpg"],["ĐẠI BĂNG TIỄN",["Ashe","Varus","Jhin"],0,"Ashe_0.jpg"],["SỨC MẠNH VÔ HẠN",["Veigar","ChoGath","Nasus"],1,"Chogath_0.jpg"]];
-let i=0,sc=0,tm=15,iv;
-function load(){
- if(i>=Q.length){document.getElementById('qt').innerHTML="Xong! "+sc+"/500 điểm<br>Chụp màn hình gửi về page nhận code!";document.getElementById('op').innerHTML="";clearInterval(iv);return}
- let q=Q[i];document.getElementById('c').innerText=(i+1)+"/5";document.getElementById('s').innerText=sc+"đ";document.getElementById('im').src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+q[3];document.getElementById('qt').innerText="Câu "+(i+1)+": Ulti "+q[0]+" là của ai?";let op=document.getElementById('op');op.innerHTML="";q[1].forEach((a,j)=>{let b=document.createElement('button');b.innerText=a;b.onclick=()=>{if(j==q[2])sc+=100;i++;load()};op.appendChild(b)});tm=15;clearInterval(iv);iv=setInterval(()=>{tm--;document.getElementById('t').innerText=tm+"s";if(tm<=0){i++;load()}},1000);
-}
-</script>
-</body>
-</html>
+body{font-family:Segoe UI;background:#0f172a;color:#fff;margin:0;padding:16px;display:flex;justify-content:center}
+.wrap{max-width:720px;width:100%;background:#1e293b;padding:22px;border-radius:18px}
+h1{text-align:center;color:#38bdf8} .q{margin-bottom:16px;padding:14px;background:#0f172a;border-radius:12px;border:1px solid #334155}
+label{display:block;padding:8px;margin:4px 0;background:#1e293b;border-radius:8px;cursor:pointer}
+.btn{width:100%;padding:14px;background:linear-gradient(90deg,#38bdf8,#f59e0b);border:none;color:#000;font-weight:900;border-radius:10px;cursor:pointer}
+.score{font-size:44px;font-weight:900;color:#f59e0b;text-align:center}
+</style></head><body><div class="wrap">
+<h1>🔥 QUIZ 28 CÂU - VHU x ESPORTS 🔥</h1>
+<p style="text-align:center;color:#94a3b8">8 Câu Văn Hiến + 20 Câu Ulti bạn gửi</p>
+<form id="quiz">
+<div class="q"><h3>C1: Tên tiếng Anh VHU? A. Van Hien University</h3><label><input type="radio" name="q1" value="A"> A. Van Hien University</label><label><input type="radio" name="q1" value="B"> B. Van Hien College</label><label><input type="radio" name="q1" value="C"> C. Hanoi U</label></div>
+<div class="q"><h3>C2: Slogan? B. Thành Nhân trước thành Danh</h3><label><input type="radio" name="q2" value="A"> A. Học mọi lúc</label><label><input type="radio" name="q2" value="B"> B. Thành Nhân trước thành Danh</label><label><input type="radio" name="q2" value="C"> C. Tiên học lễ</label></div>
+<div class="q"><h3>C3: Logo? B. Khuê Văn Các</h3><label><input type="radio" name="q3" value="B"> B. Khuê Văn Các</label><label><input type="radio" name="q3" value="A"> A. Bông sen</label></div>
+<div class="q"><h3>C4: Màu chủ đạo? A. Xanh dương - Vàng</h3><label><input type="radio" name="q4" value="A"> A. Xanh dương - Vàng</label><label><input type="radio" name="q4" value="B"> B. Đỏ - Vàng</label></div>
+<div class="q"><h3>C5: Thành lập? A. 1997</h3><label><input type="radio" name="q5" value="A"> A. 1997</label><label><input type="radio" name="q5" value="B"> B. 2007</label></div>
+<div class="q"><h3>C6: Mã trường? B. DVH</h3><label><input type="radio" name="q6" value="B"> B. DVH</label><label><input type="radio" name="q6" value="A"> A. VHI</label></div>
+<div class="q"><h3>C7: Bài hát? A. Văn Hiến trong tim</h3><label><input type="radio" name="q7" value="A"> A. Văn Hiến trong tim</label><label><input type="radio" name="q7" value="B"> B. Khác</label></div>
+<div class="q"><h3>C8: Trụ sở? A. 613 Âu Cơ</h3><label><input type="radio" name="q8" value="A"> A. 613 Âu Cơ, Tân Phú</label><label><input type="radio" name="q8" value="B"> B. Khác</label></div>
+<div class="q"><h3>C9: BÔNG SEN TỬ THẦN?</h3><label><input type="radio" name="q9" value="A"> A. Katarina</label><label><input type="radio" name="q9" value="B"> B. Akali</label><label><input type="radio" name="q9" value="C"> C. Zed</label></div>
+<div class="q"><h3>C10: CẦU VỒNG TỐI THƯỢNG?</h3><label><input type="radio" name="q10" value="A"> A. Lux</label><label><input type="radio" name="q10" value="B"> B. Ezreal</label></div>
+<div class="q"><h3>C11: BÃO ĐẠN?</h3><label><input type="radio" name="q11" value="A"> A. MissFortune</label><label><input type="radio" name="q11" value="B"> B. Jinx</label></div>
+<div class="q"><h3>C12: ĐẠI BĂNG TIỄN?</h3><label><input type="radio" name="q12" value="A"> A. Ashe</label><label><input type="radio" name="q12" value="B"> B. Varus</label></div>
+<div class="q"><h3>C13: CÔNG LÝ DEMACIA?</h3><label><input type="radio" name="q13" value="A"> A. Garen</label><label><input type="radio" name="q13" value="B"> B. Lux</label></div>
+<div class="q"><h3>C14: TỪ CHỐI TỬ THẦN?</h3><label><input type="radio" name="q14" value="A"> A. Tryndamere</label><label><input type="radio" name="q14" value="B"> B. Aatrox</label></div>
+<div class="q"><h3>C15: TRĂN TRỐI?</h3><label><input type="radio" name="q15" value="A"> A. Yasuo</label><label><input type="radio" name="q15" value="B"> B. Yone</label></div>
+<div class="q"><h3>C16: HOANG TƯỞNG?</h3><label><input type="radio" name="q16" value="A"> A. Nocturne</label><label><input type="radio" name="q16" value="B"> B. Fiddle</label></div>
+<div class="q"><h3>C17: THẦN CÁ SẤU?</h3><label><input type="radio" name="q17" value="A"> A. Renekton</label><label><input type="radio" name="q17" value="B"> B. Nasus</label></div>
+<div class="q"><h3>C18: XƠI TÁI?</h3><label><input type="radio" name="q18" value="A"> A. Chogath</label><label><input type="radio" name="q18" value="B"> B. KhaZix</label></div>
+<div class="q"><h3>C19: DẤU ẤN TỬ THẦN?</h3><label><input type="radio" name="q19" value="A"> A. Zed</label><label><input type="radio" name="q19" value="B"> B. Talon</label></div>
+<div class="q"><h3>C20: KHÚC CẦU HỒN?</h3><label><input type="radio" name="q20" value="A"> A. Karthus</label><label><input type="radio" name="q20" value="B"> B. Fiddle</label></div>
+<div class="q"><h3>C21: TÊN LỬA SIÊU KHỦNG KHIẾP?</h3><label><input type="radio" name="q21" value="A"> A. Jinx</label><label><input type="radio" name="q21" value="B"> B. Ziggs</label></div>
+<div class="q"><h3>C22: CUNG ÁNH SÁNG?</h3><label><input type="radio" name="q22" value="A"> A. Ezreal</label><label><input type="radio" name="q22" value="B"> B. Lux</label></div>
+<div class="q"><h3>C23: SÂN KHẤU TỬ THẦN?</h3><label><input type="radio" name="q23" value="A"> A. Jhin</label><label><input type="radio" name="q23" value="B"> B. Senna</label></div>
+<div class="q"><h3>C24: BÁCH PHÁT BÁCH TRÚNG?</h3><label><input type="radio" name="q24" value="A"> A. Caitlyn</label><label><input type="radio" name="q24" value="B"> B. Jinx</label></div>
+<div class="q"><h3>C25: MÁY CHÉM NOXUS?</h3><label><input type="radio" name="q25" value="A"> A. Darius</label><label><input type="radio" name="q25" value="B"> B. Draven</label></div>
+<div class="q"><h3>C26: BẪY ĐỘC NOXUS?</h3><label><input type="radio" name="q26" value="A"> A. Teemo</label><label><input type="radio" name="q26" value="B"> B. Singed</label></div>
+<div class="q"><h3>C27: KHÔNG THỂ CẢN PHÁ?</h3><label><input type="radio" name="q27" value="A"> A. Malphite</label><label><input type="radio" name="q27" value="B"> B. Alistar</label></div>
+<div class="q"><h3>C28: ĐOẠT MỆNH?</h3><label><input type="radio" name="q28" value="A"> A. Yone</label><label><input type="radio" name="q28" value="B"> B. Yasuo</label></div>
+<button type="button" class="btn" onclick="check()">NỘP BÀI 28 CÂ
