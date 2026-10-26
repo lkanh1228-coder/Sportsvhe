@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz 28 Câu - VHU x Ulti</title>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz 28 Cau</title>
 <style>
-body{font-family:Segoe UI;background:#0f172a;color:#fff;margin:0;padding:16px;display:flex;justify-content:center}
-.wrap{max-width:720px;width:100%;background:#1e293b;padding:22px;border-radius:18px}
-h1{text-align:center;color:#38bdf8} .q{margin-bottom:16px;padding:14px;background:#0f172a;border-radius:12px;border:1px solid #334155}
-label{display:block;padding:8px;margin:4px 0;background:#1e293b;border-radius:8px;cursor:pointer}
-.btn{width:100%;padding:14px;background:linear-gradient(90deg,#38bdf8,#f59e0b);border:none;color:#000;font-weight:900;border-radius:10px;cursor:pointer}
-.score{font-size:44px;font-weight:900;color:#f59e0b;text-align:center}
-</style></head><body><div class="wrap">
-<h1>🔥 QUIZ 28 CÂU - VHU x ESPORTS 🔥</h1>
-<p style="text-align:center;color:#94a3b8">8 Câu Văn Hiến + 20 Câu Ulti bạn gửi</p>
-<form id="quiz">
-<div class="q"><h3>C1: Tên tiếng Anh VHU? A. Van Hien University</h3><label><input type="radio" name="q1" value="A"> A. Van Hien University</label><label><input type="radio" name="q1" value="B"> B. Van Hien College</label><label><input type="radio" name="q1" value="C"> C. Hanoi U</label></div>
-<div class="q"><h3>C2: Slogan? B. Thành Nhân trước thành Danh</h3><label><input type="radio" name="q2" value="A"> A. Học mọi lúc</label><label><input type="radio" name="q2" value="B"> B. Thành Nhân trước thành Danh</label><label><input type="radio" name="q2" value="C"> C. Tiên học lễ</label></div>
-<div class="q"><h3>C3: Logo? B. Khuê Văn Các</h3><label><input type="radio" name="q3" value="B"> B. Khuê Văn Các</label><label><input type="radio" name="q3" value="A"> A. Bông sen</label></div>
-<div class="q"><h3>C4: Màu chủ đạo? A. Xanh dương - Vàng</h3><label><input type="radio" name="q4" value="A"> A. Xanh dương - Vàng</label><label><input type="radio" name="q4" value="B"> B. Đỏ - Vàng</label></div>
-<div class="q"><h3>C5: Thành lập? A. 1997</h3><label><input type="radio" name="q5" value="A"> A. 1997</label><label><input type="radio" name="q5" value="B"> B. 2007</label></div>
-<div class="q"><h3>C6: Mã trường? B. DVH</h3><label><input type="radio" name="q6" value="B"> B. DVH</label><label><input type="radio" name="q6" value="A"> A. VHI</label></div>
-<div class="q"><h3>C7: Bài hát? A. Văn Hiến trong tim</h3><label><input type="radio" name="q7" value="A"> A. Văn Hiến trong tim</label><label><input type="radio" name="q7" value="B"> B. Khác</label></div>
-<div class="q"><h3>C8: Trụ sở? A. 613 Âu Cơ</h3><label><input type="radio" name="q8" value="A"> A. 613 Âu Cơ, Tân Phú</label><label><input type="radio" name="q8" value="B"> B. Khác</label></div>
-<div class="q"><h3>C9: BÔNG SEN TỬ THẦN?</h3><label><input type="radio" name="q9" value="A"> A. Katarina</label><label><input type="radio" name="q9" value="B"> B. Akali</label><label><input type="radio" name="q9" value="C"> C. Zed</label></div>
-<div class="q"><h3>C10: CẦU VỒNG TỐI THƯỢNG?</h3><label><input type="radio" name="q10" value="A"> A. Lux</label><label><input type="radio" name="q10" value="B"> B. Ezreal</label></div>
-<div class="q"><h3>C11: BÃO ĐẠN?</h3><label><input type="radio" name="q11" value="A"> A. MissFortune</label><label><input type="radio" name="q11" value="B"> B. Jinx</label></div>
-<div class="q"><h3>C12: ĐẠI BĂNG TIỄN?</h3><label><input type="radio" name="q12" value="A"> A. Ashe</label><label><input type="radio" name="q12" value="B"> B. Varus</label></div>
-<div class="q"><h3>C13: CÔNG LÝ DEMACIA?</h3><label><input type="radio" name="q13" value="A"> A. Garen</label><label><input type="radio" name="q13" value="B"> B. Lux</label></div>
-<div class="q"><h3>C14: TỪ CHỐI TỬ THẦN?</h3><label><input type="radio" name="q14" value="A"> A. Tryndamere</label><label><input type="radio" name="q14" value="B"> B. Aatrox</label></div>
-<div class="q"><h3>C15: TRĂN TRỐI?</h3><label><input type="radio" name="q15" value="A"> A. Yasuo</label><label><input type="radio" name="q15" value="B"> B. Yone</label></div>
-<div class="q"><h3>C16: HOANG TƯỞNG?</h3><label><input type="radio" name="q16" value="A"> A. Nocturne</label><label><input type="radio" name="q16" value="B"> B. Fiddle</label></div>
-<div class="q"><h3>C17: THẦN CÁ SẤU?</h3><label><input type="radio" name="q17" value="A"> A. Renekton</label><label><input type="radio" name="q17" value="B"> B. Nasus</label></div>
-<div class="q"><h3>C18: XƠI TÁI?</h3><label><input type="radio" name="q18" value="A"> A. Chogath</label><label><input type="radio" name="q18" value="B"> B. KhaZix</label></div>
-<div class="q"><h3>C19: DẤU ẤN TỬ THẦN?</h3><label><input type="radio" name="q19" value="A"> A. Zed</label><label><input type="radio" name="q19" value="B"> B. Talon</label></div>
-<div class="q"><h3>C20: KHÚC CẦU HỒN?</h3><label><input type="radio" name="q20" value="A"> A. Karthus</label><label><input type="radio" name="q20" value="B"> B. Fiddle</label></div>
-<div class="q"><h3>C21: TÊN LỬA SIÊU KHỦNG KHIẾP?</h3><label><input type="radio" name="q21" value="A"> A. Jinx</label><label><input type="radio" name="q21" value="B"> B. Ziggs</label></div>
-<div class="q"><h3>C22: CUNG ÁNH SÁNG?</h3><label><input type="radio" name="q22" value="A"> A. Ezreal</label><label><input type="radio" name="q22" value="B"> B. Lux</label></div>
-<div class="q"><h3>C23: SÂN KHẤU TỬ THẦN?</h3><label><input type="radio" name="q23" value="A"> A. Jhin</label><label><input type="radio" name="q23" value="B"> B. Senna</label></div>
-<div class="q"><h3>C24: BÁCH PHÁT BÁCH TRÚNG?</h3><label><input type="radio" name="q24" value="A"> A. Caitlyn</label><label><input type="radio" name="q24" value="B"> B. Jinx</label></div>
-<div class="q"><h3>C25: MÁY CHÉM NOXUS?</h3><label><input type="radio" name="q25" value="A"> A. Darius</label><label><input type="radio" name="q25" value="B"> B. Draven</label></div>
-<div class="q"><h3>C26: BẪY ĐỘC NOXUS?</h3><label><input type="radio" name="q26" value="A"> A. Teemo</label><label><input type="radio" name="q26" value="B"> B. Singed</label></div>
-<div class="q"><h3>C27: KHÔNG THỂ CẢN PHÁ?</h3><label><input type="radio" name="q27" value="A"> A. Malphite</label><label><input type="radio" name="q27" value="B"> B. Alistar</label></div>
-<div class="q"><h3>C28: ĐOẠT MỆNH?</h3><label><input type="radio" name="q28" value="A"> A. Yone</label><label><input type="radio" name="q28" value="B"> B. Yasuo</label></div>
-<button type="button" class="btn" onclick="check()">NỘP BÀI 28 CÂU</button>
+body{background:#0f172a;color:#fff;font-family:Arial;padding:15px}
+.box{max-width:700px;margin:auto;background:#1e293b;padding:20px;border-radius:12px}
+.q{background:#0f172a;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #334155}
+label{display:block;padding:6px;cursor:pointer}
+.btn{width:100%;padding:12px;background:#38bdf8;color:#000;font-weight:bold;border:none;border-radius:8px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box">
+<h2 style="text-align:center;color:#38bdf8">QUIZ 28 CAU - VHU + ULTI</h2>
+<form id="f">
+<div class="q"><b>C1: Ten tieng Anh VHU?</b><br><label><input type="radio" name="q1" value="A"> A. Van Hien University</label><label><input type="radio" name="q1" value="B"> B. Van Hien College</label></div>
+<div class="q"><b>C2: Slogan?</b><br><label><input type="radio" name="q2" value="B"> B. Thanh Nhan truoc thanh Danh</label><label><input type="radio" name="q2" value="A"> A. Hoc moi luc</label></div>
+<div class="q"><b>C3: Logo?</b><br><label><input type="radio" name="q3" value="B"> B. Khue Van Cac</label><label><input type="radio" name="q3" value="A"> A. Bong sen</label></div>
+<div class="q"><b>C4: Mau chu dao?</b><br><label><input type="radio" name="q4" value="A"> A. Xanh duong - Vang</label><label><input type="radio" name="q4" value="B"> B. Do - Vang</label></div>
+<div class="q"><b>C5: Thanh lap?</b><br><label><input type="radio" name="q5" value="A"> A. 1997</label><label><input type="radio" name="q5" value="B"> B. 2007</label></div>
+<div class="q"><b>C6: Ma truong?</b><br><label><input type="radio" name="q6" value="B"> B. DVH</label><label><input type="radio" name="q6" value="A"> A. VHI</label></div>
+<div class="q"><b>C7: Bai hat?</b><br><label><input type="radio" name="q7" value="A"> A. Van Hien trong tim</label><label><input type="radio" name="q7" value="B"> B. Khac</label></div>
+<div class="q"><b>C8: Tru so?</b><br><label><input type="radio" name="q8" value="A"> A. 613 Au Co</label><label><input type="radio" name="q8" value="B"> B. Khac</label></div>
+<div class="q"><b>C9: BONG SEN TU THAN?</b><br><label><input type="radio" name="q9" value="A"> A. Katarina</label><label><input type="radio" name="q9" value="B"> B. Akali</label></div>
+<div class="q"><b>C10: CAU VONG TOI THUONG?</b><br><label><input type="radio" name="q10" value="A"> A. Lux</label><label><input type="radio" name="q10" value="B"> B. Ezreal</label></div>
+<div class="q"><b>C11: BAO DAN?</b><br><label><input type="radio" name="q11" value="A"> A. MissFortune</label><label><input type="radio" name="q11" value="B"> B. Jinx</label></div>
+<div class="q"><b>C12: DAI BANG TIEN?</b><br><label><input type="radio" name="q12" value="A"> A. Ashe</label><label><input type="radio" name="q12" value="B"> B. Varus</label></div>
+<div class="q"><b>C13: CONG LY DEMACIA?</b><br><label><input type="radio" name="q13" value="A"> A. Garen</label><label><input type="radio" name="q13" value="B"> B. Lux</label></div>
+<div class="q"><b>C14: TU CHOI TU THAN?</b><br><label><input type="radio" name="q14" value="A"> A. Tryndamere</label><label><input type="radio" name="q14" value="B"> B. Aatrox</label></div>
+<div class="q"><b>C15: TRAN TROI?</b><br><label><input type="radio" name="q15" value="A"> A. Yasuo</label><label><input type="radio" name="q15" value="B"> B. Yone</label></div>
+<div class="q"><b>C16: HOANG TUONG?</b><br><label><input type="radio" name="q16" value="A"> A. Nocturne</label><label><input type="radio" name="q16" value="B"> B. Fiddle</label></div>
+<div class="q"><b>C17: THAN CA SAU?</b><br><label><input type="radio" name="q17" value="A"> A. Renekton</label><label><input type="radio" name="q17" value="B"> B. Nasus</label></div>
+<div class="q"><b>C18: XOI TAI?</b><br><label><input type="radio" name="q18" value="A"> A. Chogath</label><label><input type="radio" name="q18" value="B"> B. KhaZix</label></div>
+<div class="q"><b>C19: DAU AN TU THAN?</b><br><label><input type="radio" name="q19" value="A"> A. Zed</label><label><input type="radio" name="q19" value="B"> B. Talon</label></div>
+<div class="q"><b>C20: KHUC CAU HON?</b><br><label><input type="radio" name="q20" value="A"> A. Karthus</label><label><input type="radio" name="q20" value="B"> B. Fiddle</label></div>
+<div class="q"><b>C21: TEN LUA SIEU KHUNG KHIEP?</b><br><label><input type="radio" name="q21" value="A"> A. Jinx</label><label><input type="radio" name="q21" value="B"> B. Ziggs</label></div>
+<div class="q"><b>C22: CUNG ANH SANG?</b><br><label><input type="radio" name="q22" value="A"> A. Ezreal</label><label><input type="radio" name="q22" value="B"> B. Lux</label></div>
+<div class="q"><b>C23: SAN KHAU TU THAN?</b><br><label><input type="radio" name="q23" value="A"> A. Jhin</label><label><input type="radio" name="q23" value="B"> B. Senna</label></div>
+<div class="q"><b>C24: BACH PHAT BACH TRUNG?</b><br><label><input type="radio" name="q24" value="A"> A. Caitlyn</label><label><input type="radio" name="q24" value="B"> B. Jinx</label></div>
+<div class="q"><b>C25: MAY CHEM NOXUS?</b><br><label><input type="radio" name="q25" value="A"> A. Darius</label><label><input type="radio" name="q25" value="B"> B. Draven</label></div>
+<div class="q"><b>C26: BAY DOC NOXUS?</b><br><label><input type="radio" name="q26" value="A"> A. Teemo</label><label><input type="radio" name="q26" value="B"> B. Singed</label></div>
+<div class="q"><b>C27: KHONG THE CAN PHA?</b><br><label><input type="radio" name="q27" value="A"> A. Malphite</label><label><input type="radio" name="q27" value="B"> B. Alistar</label></div>
+<div class="q"><b>C28: DOAT MENH?</b><br><label><input type="radio" name="q28" value="A"> A. Yone</label><label><input type="radio" name="q28" value="B"> B. Yasuo</label></div>
+<button type="button" class="btn" onclick="check()">NOP BAI</button>
 </form>
-<div id="res" style="display:none;text-align:center"><div class="score" id="score"></div><p id="msg"></p><button class="btn" onclick="location.href='tuyen-thanh-vien.html'">ĐI ĐẾN FORM TUYỂN →</button></div>
+<div id="res" style="display:none;text-align:center"><h2 id="sc"></h2><p id="msg"></p><button class="btn" onclick="location.href='tuyen-thanh-vien.html'">DI DEN FORM TUYEN</button></div>
 </div>
 <script>
-const ans={q1:"A",q2:"B",q3:"B",q4:"A",q5:"A",q6:"B",q7:"A",q8:"A",q9:"A",q10:"A",q11:"A",q12:"A",q13:"A",q14:"A",q15:"A",q16:"A",q17:"A",q18:"A",q19:"A",q20:"A",q21:"A",q22:"A",q23:"A",q24:"A",q25:"A",q26:"A",q27:"A",q28:"A"};
-function check(){let s=0;for(let k in ans){let v=document.querySelector('input[name="'+k+'"]:checked');if(v&&v.value==ans[k])s++;}document.getElementById('quiz').style.display='none';document.getElementById('res').style.display='block';document.getElementById('score').innerText=s+'/28';let m=s>=24?"🔥 HUYỀN THOẠI!":s>=18?"💎 CAO THỦ!":s>=12?"⚔️ KHÁ!":"🌱 TẬP SỰ!";document.getElementById('msg').innerText=m;}
-</script></body></html>
+function check(){
+let s=0;
+for(let i=1;i<=28;i++){
+ let v=document.querySelector('input[name="q'+i+'"]:checked');
+ if(v && v.value=="A") s++;
+}
+document.getElementById('f').style.display='none';
+document.getElementById('res').style.display='block';
+document.getElementById('sc').innerText=s+'/28 diem';
+document.getElementById('msg').innerText=s>=20?'XUAT SAC!':'KHA TOT! Vao CLB nhe!';
+}
+</script>
+</body>
+</html>
