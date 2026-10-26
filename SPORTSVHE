@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSports VHE - Follow De Choi Game</title>
+<style>
+body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;text-align:center;display:flex;justify-content:center;padding:20px}
+.box{max-width:400px;width:100%}
+.card{background:#1e1e3a;border-radius:20px;padding:20px;border:2px solid #7b2cff55}
+.follow{background:#1877F2;color:#fff;padding:16px;border-radius:12px;display:block;text-decoration:none;font-weight:800;font-size:18px;margin:15px 0}
+.play{background:#22c55e;color:#fff;padding:16px;border-radius:12px;display:none;text-decoration:none;font-weight:800;font-size:18px;margin:15px 0;border:0;width:100%}
+img{width:100%;height:190px;border-radius:12px;object-fit:cover}
+button{width:100%;padding:13px;margin-top:8px;border-radius:10px;border:0;background:#2a2a4a;color:#fff;font-weight:700}
+.small{color:#aaa;font-size:13px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="box" id="followGate">
+<div class="card">
+<h2 style="color:#a78bfa;margin:5px">🎮 eSports VHE</h2>
+<p>Follow kênh để mở khóa trò chơi đoán Ulti Liên Minh!</p>
+<img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg">
+<a class="follow" href="https://www.facebook.com/eSportsVHE" target="_blank" onclick="unlock()">1️⃣ BẤM FOLLOW eSports VHE</a>
+<button id="playBtn" class="play" onclick="startGame()">2️⃣ ĐÃ FOLLOW - VÀO CHƠI NGAY ▶️</button>
+<div class="small">Bấm Follow xong quay lại đây, nút xanh sẽ hiện ra</div>
+</div>
+</div>
+
+<div class="box" id="gameBox" style="display:none">
+<div style="display:flex;justify-content:space-between;background:#15152a;padding:10px;border-radius:10px;margin-bottom:10px;font-weight:700"><span id="c">1/5</span><span id="s">0đ</span><span id="t">15s</span></div>
+<div class="card"><img id="im"><div id="qt" style="margin:12px 0;font-weight:700"></div><div id="op"></div></div>
+</div>
+
+<script>
+function unlock(){
+ setTimeout(()=>{document.getElementById('playBtn').style.display='block'},1500);
+}
+function startGame(){
+ document.getElementById('followGate').style.display='none';
+ document.getElementById('gameBox').style.display='block';
+ load();
+}
+const Q=[["LỐC XOÁY TỬ VONG",["Garen","Katarina","Samira"],1,"Katarina_0.jpg"],["CẦU VỒNG TỐI THƯỢNG",["Lux","Seraphine","Ezreal"],0,"Lux_0.jpg"],["BÃO ĐẠN",["Miss Fortune","Jinx","Lucian"],0,"MissFortune_0.jpg"],["ĐẠI BĂNG TIỄN",["Ashe","Varus","Jhin"],0,"Ashe_0.jpg"],["SỨC MẠNH VÔ HẠN",["Veigar","ChoGath","Nasus"],1,"Chogath_0.jpg"]];
+let i=0,sc=0,tm=15,iv;
+function load(){
+ if(i>=Q.length){document.getElementById('qt').innerHTML="Xong! "+sc+"/500 điểm<br>Chụp màn hình gửi về page nhận code!";document.getElementById('op').innerHTML="";clearInterval(iv);return}
+ let q=Q[i];document.getElementById('c').innerText=(i+1)+"/5";document.getElementById('s').innerText=sc+"đ";document.getElementById('im').src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+q[3];document.getElementById('qt').innerText="Câu "+(i+1)+": Ulti "+q[0]+" là của ai?";let op=document.getElementById('op');op.innerHTML="";q[1].forEach((a,j)=>{let b=document.createElement('button');b.innerText=a;b.onclick=()=>{if(j==q[2])sc+=100;i++;load()};op.appendChild(b)});tm=15;clearInterval(iv);iv=setInterval(()=>{tm--;document.getElementById('t').innerText=tm+"s";if(tm<=0){i++;load()}},1000);
+}
+</script>
+</body>
+</html>
