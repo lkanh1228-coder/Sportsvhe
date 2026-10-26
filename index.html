@@ -1,1 +1,80 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>eSports VHE</title><style>body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;padding:16px;display:flex;justify-content:center}.box{max-width:400px;width:100%}.card{background:#1e1e3a;border-radius:18px;padding:14px}img{width:100%;height:190px;border-radius:12px;object-fit:cover}button{width:100%;padding:13px;margin-top:8px;border-radius:10px;border:0;background:#2a2a4a;color:#fff;font-weight:700}</style></head><body><div class="box"><h3 style="text-align:center;color:#a78bfa">🎮 eSports VHE - DOAN ULTI</h3><div style="display:flex;justify-content:space-between;background:#15152a;padding:10px;border-radius:10px"><span id="c">1/5</span><span id="s">0d</span><span id="t">15s</span></div><div class="card"><img id="im" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg"><div id="qt" style="margin:12px 0;font-weight:700"></div><div id="op"></div></div><a href="https://www.facebook.com/eSportsVHE" target="_blank" style="display:block;background:#1877F2;color:#fff;text-align:center;padding:13px;border-radius:12px;text-decoration:none;font-weight:700;margin-top:12px">Follow eSports VHE</a></div><script>const Q=[["LOC XOAY TU VONG",["Garen","Katarina","Samira"],1,"Katarina_0.jpg"],["CAU VONG TOI THUONG",["Lux","Seraphine","Ezreal"],0,"Lux_0.jpg"],["BAO DAN",["Miss Fortune","Jinx","Lucian"],0,"MissFortune_0.jpg"],["DAI BANG TIEN",["Ashe","Varus","Jhin"],0,"Ashe_0.jpg"],["SUC MANH VO HAN",["Veigar","ChoGath","Nasus"],1,"Chogath_0.jpg"]];let i=0,sc=0,tm=15,iv;function load(){if(i>=Q.length){document.getElementById('qt').innerHTML="Xong! "+sc+"/500 diem";document.getElementById('op').innerHTML="";clearInterval(iv);return}let q=Q[i];document.getElementById('c').innerText=(i+1)+"/5";document.getElementById('s').innerText=sc+"d";document.getElementById('im').src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+q[3];document.getElementById('qt').innerText="Cau "+(i+1)+": Ulti "+q[0]+" la cua ai?";let op=document.getElementById('op');op.innerHTML="";q[1].forEach((a,j)=>{let b=document.createElement('button');b.innerText=a;b.onclick=()=>{if(j==q[2])sc+=100;i++;load()};op.appendChild(b)});tm=15;clearInterval(iv);iv=setInterval(()=>{tm--;document.getElementById('t').innerText=tm+"s";if(tm<=0){i++;load()}},1000)}load();</script></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSports VHE - Doan Ulti 10 Cau</title>
+<style>
+body{margin:0;background:#0a0a14;color:#fff;font-family:Arial;display:flex;justify-content:center;padding:16px}
+.box{max-width:400px;width:100%}
+.card{background:#1e1e3a;border-radius:18px;padding:14px;border:2px solid #7b2cff33}
+img{width:100%;height:190px;border-radius:12px;object-fit:cover;background:#000}
+button{width:100%;padding:13px;margin-top:8px;border-radius:10px;border:0;background:#2a2a4a;color:#fff;font-weight:700;font-size:15px}
+.follow{background:#1877F2;color:#fff;padding:14px;border-radius:12px;display:block;text-align:center;text-decoration:none;font-weight:800;margin-bottom:10px}
+.top{display:flex;justify-content:space-between;background:#15152a;padding:10px 12px;border-radius:10px;margin-bottom:10px;font-weight:700}
+.play{background:#22c55e}
+</style>
+</head>
+<body>
+<div class="box">
+<div id="gate">
+<h3 style="text-align:center;color:#a78bfa">🎮 eSports VHE - THỬ THÁCH 10 CÂU</h3>
+<a class="follow" href="https://www.facebook.com/eSportsVHE" target="_blank" onclick="setTimeout(()=>{document.getElementById('play').style.display='block'},1000)">1️⃣ FOLLOW eSports VHE ĐỂ MỞ KHÓA</a>
+<button id="play" class="play" style="display:none;background:#22c55e;padding:14px;border-radius:12px;font-weight:800" onclick="start()">2️⃣ ĐÃ FOLLOW - VÀO CHƠI NGAY</button>
+<p style="text-align:center;color:#aaa;font-size:13px">Follow xong mới hiện nút chơi nhé</p>
+</div>
+
+<div id="game" style="display:none">
+<div class="top"><span id="c">1/10</span><span id="s">0đ</span><span id="t">15s</span></div>
+<div class="card">
+<img id="im">
+<div id="qt" style="margin:12px 0;font-weight:700;font-size:17px"></div>
+<div id="op"></div>
+</div>
+<div id="end" style="display:none;text-align:center;margin-top:12px"></div>
+</div>
+</div>
+
+<script>
+function start(){document.getElementById('gate').style.display='none';document.getElementById('game').style.display='block';load();}
+const Q=[
+["LỐC XOÁY TỬ VONG",["Garen","Katarina","Samira"],1,"Katarina_0.jpg"],
+["CẦU VỒNG TỐI THƯỢNG",["Lux","Seraphine","Ezreal"],0,"Lux_0.jpg"],
+["BÃO ĐẠN",["Miss Fortune","Jinx","Lucian"],0,"MissFortune_0.jpg"],
+["ĐẠI BĂNG TIỄN",["Ashe","Varus","Jhin"],0,"Ashe_0.jpg"],
+["TRĂN TRỐI",["Tryndamere","Garen","Aatrox"],0,"Tryndamere_0.jpg"],
+["BÃO KIẾM",["Yasuo","Yone","Irelia"],0,"Yasuo_0.jpg"],
+["NHÀY - DẬM - XOAY",["Garen","Darius","Garen"],0,"Garen_0.jpg"],
+["BÓNG ĐÈ",["Nocturne","Zed","Karthus"],0,"Nocturne_0.jpg"],
+["THẦN CÁ SẤU",["Renekton","Nasus","ChoGath"],0,"Renekton_0.jpg"],
+["SỨC MẠNH VÔ HẠN",["Veigar","Chogath","Nasus"],1,"Chogath_0.jpg"]
+];
+let i=0,sc=0,tm=15,iv;
+function load(){
+ if(i>=Q.length){
+   clearInterval(iv);
+   document.getElementById('qt').innerHTML="🎉 XONG 10 CÂU!<br>Bạn được "+sc+"/1000 điểm";
+   document.getElementById('op').innerHTML="";
+   document.getElementById('end').style.display='block';
+   document.getElementById('end').innerHTML='<a href="https://www.facebook.com/eSportsVHE" target="_blank" style="display:block;background:#1877F2;color:#fff;padding:13px;border-radius:12px;text-decoration:none;font-weight:700">Chụp màn hình gửi về eSports VHE nhận CODE</a>';
+   return;
+ }
+ let q=Q[i];
+ document.getElementById('c').innerText=(i+1)+"/10";
+ document.getElementById('s').innerText=sc+"đ";
+ document.getElementById('im').src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+q[3];
+ document.getElementById('qt').innerText="Câu "+(i+1)+": Ulti '"+q[0]+"' là của ai?";
+ let op=document.getElementById('op');op.innerHTML="";
+ q[1].forEach((a,j)=>{
+   let b=document.createElement('button');b.innerText=a;
+   b.onclick=()=>{
+     if(j==q[2]){sc+=100;b.style.background="#22c55e"} else {b.style.background="#ef4444"}
+     setTimeout(()=>{i++;load()},400);
+   };
+   op.appendChild(b);
+ });
+ tm=15;clearInterval(iv);
+ iv=setInterval(()=>{tm--;document.getElementById('t').innerText=tm+"s";if(tm<=0){i++;load()}},1000);
+}
+</script>
+</body>
+</html>
