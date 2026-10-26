@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tuyển Thành Viên - eSports VHE</title>
+<style>body{margin:0;background:#0f0f1e;color:#fff;font-family:Arial;padding:16px;display:flex;justify-content:center}
+.box{max-width:500px;width:100%}.card{background:#1e1e3a;border-radius:16px;padding:18px;margin-bottom:14px;border:1px solid #3a3a6a}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:0;background:#2a2a4a;color:#fff;margin-top:6px;box-sizing:border-box}
+label{font-weight:700;font-size:14px;color:#a78bfa}button{background:#22c55e;color:#fff;padding:14px;border-radius:12px;border:0;width:100%;font-weight:800;font-size:16px;margin-top:10px}
+.ban{display:none}.ban.active{display:block}</style></head><body><div class="box">
+<h2 style="text-align:center">🎮 TUYỂN THÀNH VIÊN GEN 5<br><span style="color:#a78bfa;font-size:16px">CLB THỂ THAO ĐIỆN TỬ VĂN HIẾN</span></h2>
+
+<div class="card"><label>Họ và tên *</label><input id="hoten" placeholder="Nguyễn Văn A">
+<label>MSSV *</label><input id="mssv" placeholder="231A...">
+<label>Khoa / Lớp *</label><input id="lop" placeholder="VD: CNTT - 231A01">
+<label>SĐT / Zalo *</label><input id="sdt" placeholder="09xx...">
+<label>Link Facebook *</label><input id="fb" placeholder="https://facebook.com/..."></div>
+
+<div class="card"><label>Bạn ứng tuyển ban nào? *</label>
+<select id="ban" onchange="doiBan()"><option value="">-- Chọn Ban --</option>
+<option value="tuyenthu">BAN TUYỂN THỦ (VĐV Thi Đấu)</option>
+<option value="truyenthong">BAN TRUYỀN THÔNG</option>
+<option value="haucan">BAN HẬU CẦN - SỰ KIỆN</option></select></div>
+
+<div id="ban-tuyenthu" class="card ban"><h3 style="color:#22c55e">BAN TUYỂN THỦ</h3>
+<label>Game chính</label><select id="game"><option>LOL</option><option>Valorant</option><option>Liên Quân</option><option>FC Online</option><option>PUBG</option></select>
+<label>Rank + ID Game *</label><input id="rank" placeholder="VD: Bạch Kim 2 - eSportsVHE#VHU">
+<label>Role sở trường</label><input id="role" placeholder="VD: Mid / Duelist / Top...">
+<label>Bạn có PC train team không?</label><select><option>Có</option><option>Không</option></select></div>
+
+<div id="ban-truyenthong" class="card ban"><h3 style="color:#60a5fa">BAN TRUYỀN THÔNG</h3>
+<label>Chuyên môn</label><select><option>Viết content</option><option>Thiết kế Canva/PTS</option><option>Edit video Capcut/Premiere</option><option>Chụp ảnh / Quay phim</option><option>Chưa biết nhưng muốn học</option></select>
+<label>Link sản phẩm (nếu có)</label><input placeholder="Link Behance / TikTok / Drive...">
+<label>Bạn dùng được phần mềm nào?</label><input placeholder="VD: Canva, Capcut, PTS..."></div>
+
+<div id="ban-haucan" class="card ban"><h3 style="color:#f59e0b">BAN HẬU CẦN</h3>
+<label>Điểm mạnh</label><select><option>Giao tiếp tốt</option><option>Có xe máy di chuyển</option><option>Tỉ mỉ, có trách nhiệm</option><option>Có quan hệ xin tài trợ</option></select>
+<label>Bạn tham gia cuối tuần khi có giải được không?</label><select><option>Được</option><option>Không</option></select>
+<label>Kinh nghiệm tổ chức sự kiện (nếu có)</label><textarea placeholder="VD: Từng làm..."></textarea></div>
+
+<div class="card"><label>Tại sao bạn muốn vào eSports VHE? *</label><textarea id="lydo" rows="3" placeholder="Viết vài dòng tâm huyết..."></textarea>
+<button onclick="gui()">GỬI ĐƠN ĐĂNG KÝ</button><div id="kq" style="text-align:center;margin-top:10px"></div></div>
+
+<script>
+function doiBan(){document.querySelectorAll('.ban').forEach(b=>b.classList.remove('active'));let v=document.getElementById('ban').value;if(v)document.getElementById('ban-'+v).classList.add('active');}
+function gui(){let ten=document.getElementById('hoten').value;if(!ten){alert('Nhập họ tên đã bạn!');return;}
+let msg=`ĐĂNG KÝ MỚI eSports VHE:%0A Họ tên: ${ten}%0A MSSV: ${document.getElementById('mssv').value}%0A Lớp: ${document.getElementById('lop').value}%0A SĐT: ${document.getElementById('sdt').value}%0A FB: ${document.getElementById('fb').value}%0A Ban: ${document.getElementById('ban').value}%0A Game/Rank: ${document.getElementById('rank')?.value||''} ${document.getElementById('role')?.value||''}%0A Lý do: ${document.getElementById('lydo').value}`;
+document.getElementById('kq').innerHTML='✅ Đã ghi nhận! Chụp màn hình gửi về Page <a href="https://www.facebook.com/eSportsVHE" target="_blank" style="color:#22c55e">eSports VHE</a> nhé!';window.open(`https://www.facebook.com/eSportsVHE`,'_blank');}
+</script></div></body></html>
